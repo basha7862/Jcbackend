@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+import Jcbackend
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Jcbackend.settings')
 
 application = get_wsgi_application()
+startCommand: gunicorn Jcbackend.wsgi # type: ignore
